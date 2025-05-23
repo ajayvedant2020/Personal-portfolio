@@ -23,21 +23,27 @@ function App() {
 
   return (
     <div className="relative min-h-screen bg-gray-900">
-      {/* Neural Network Background */}
-      <div className="fixed inset-0 neural-network"></div>
+      <div className="fixed inset-0">
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-blue-500/20"></div>
+      </div>
       
-      {/* Main Content */}
       <div className="relative z-10">
         <Header />
         <main className="container mx-auto px-4 sm:px-6 lg:px-8 pb-20">
           <Hero />
-          <Education />
-          <Experience />
-          <Projects />
-          <Publications />
-          <Achievements />
-          <Certifications />
-          <Skills />
+          <div className="grid grid-cols-1 lg:grid-cols-[2fr,1fr] gap-8">
+            <div>
+              <Experience />
+              <Projects />
+              <Publications />
+            </div>
+            <div className="space-y-8">
+              <Education />
+              <Skills />
+              <Achievements />
+              <Certifications />
+            </div>
+          </div>
         </main>
         <Footer />
       </div>
